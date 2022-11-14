@@ -1,6 +1,6 @@
 # Asteroid_Haskell
 
-### Mehrad Haghshenas 
+###Mehrad Haghshenas 
 ### 2022-11-14
 
 ####### This project was created with “cabal” and the dependencies “gloss” and “random” have been added. 
