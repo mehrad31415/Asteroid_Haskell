@@ -1,4 +1,5 @@
 # Asteroid_Haskell
+Creating an Asteroid Game using Haskell.
 
 ### Mehrad Haghshenas 
 ### 2022-11-14
