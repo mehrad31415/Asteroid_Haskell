@@ -73,7 +73,7 @@ produceAsteroids gamestate = do
   destinationX <- randomRIO (-200,200)
   destinationY <- randomRIO (-200,200)
   return $ gamestate {ship = moveShip (ship gamestate),
-                      asteroids = Asteroid (Collide randomPlace 5) (unitV ((fst randomPlace - destinationX),(snd randomPlace - destinationY)))
+                      asteroids = Asteroid (Collide randomPlace 5)  (10 * fst (unitV ((destinationX - fst randomPlace),(destinationY - snd randomPlace)))), 10* snd (unitV ((destinationX - fst randomPlace),(destinationY - snd randomPlace))))
                       :(moveAsteroids (asteroids gamestate) (score gamestate) (ship gamestate) (bullets gamestate)),
                       bullets = moveBullets (bullets gamestate),
                       score = (score gamestate) + checkAsteroids (bullets gamestate) (asteroids gamestate),
